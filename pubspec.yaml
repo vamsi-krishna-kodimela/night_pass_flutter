@@ -1,0 +1,35 @@
+name: night_pass
+description: A new Flutter project.
+
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.19.6 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_feather_icons: ^2.0.0+1
+  google_fonts: ^4.0.4
+  provider: ^6.0.5
+  shared_preferences: ^2.1.0
+  carousel_slider: ^4.2.1
+  geolocator: ^9.0.2
+  geocoding: ^2.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+  assets:
+    - assets/
