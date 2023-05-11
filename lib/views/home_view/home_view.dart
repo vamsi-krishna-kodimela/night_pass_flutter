@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_feather_icons/flutter_feather_icons.dart';
-import 'package:night_pass/views/home_view/widgets/home_widgets.dart';
+import './widgets/home_widgets.dart';
 
 class HomeView extends StatelessWidget {
   static const kRouteName = "/home";
@@ -19,11 +19,17 @@ class HomeView extends StatelessWidget {
           onPressed: () {},
         ),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Column(
-          children: const [
+          children: [
             EventsCarousel(
               key: Key('events-carousel'),
+            ),
+            SubscriptionBanner(
+              key: Key('subscription-banner'),
+            ),
+            EventList(
+              key: Key('event-list'),
             ),
           ],
         ),
