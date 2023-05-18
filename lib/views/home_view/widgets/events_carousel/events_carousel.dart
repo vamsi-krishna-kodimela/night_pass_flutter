@@ -7,34 +7,34 @@ class EventsCarousel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> events = ["1", "2", "3", "4", "5"];
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24.0),
-      child: CarouselSlider(
-        items: events
-            .map<Widget>(
-              (event) => Container(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: NetworkImage(
-                      "https://picsum.photos/seed/${event}/300/200",
-                    ),
-                    alignment: Alignment.center,
-                    fit: BoxFit.cover,
+    return CarouselSlider(
+      items: events
+          .map<Widget>(
+            (event) => Container(
+              margin: const EdgeInsets.symmetric(
+                horizontal: 24.0,
+              ),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://picsum.photos/seed/${event}/300/200",
                   ),
-                  borderRadius: BorderRadius.circular(
-                    16.0,
-                  ),
+                  alignment: Alignment.center,
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(
+                  16.0,
                 ),
               ),
-            )
-            .toList(),
-        options: CarouselOptions(
-          aspectRatio: 3 / 2,
-          autoPlay: true,
-          viewportFraction: 1,
-          padEnds: true,
-          clipBehavior: Clip.antiAliasWithSaveLayer,
-        ),
+            ),
+          )
+          .toList(),
+      options: CarouselOptions(
+        aspectRatio: 3 / 2,
+        autoPlay: true,
+        viewportFraction: 1,
+        padEnds: true,
+        clipBehavior: Clip.antiAliasWithSaveLayer,
       ),
     );
   }
